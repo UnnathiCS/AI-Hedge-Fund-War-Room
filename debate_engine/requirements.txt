@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+plotly
+yfinance
+groq
+python-dotenv
+gTTS
+fastapi
+uvicorn

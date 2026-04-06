@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#1a1a1a" rx="6"/>
+  
+  <!-- Chart/Trading icon -->
+  <g transform="translate(8, 8)">
+    <!-- Grid -->
+    <rect x="0" y="0" width="16" height="16" fill="none" stroke="#00ff88" stroke-width="0.5" opacity="0.3"/>
+    
+    <!-- Trending up line -->
+    <polyline points="2,12 5,8 8,10 11,4 14,6 16,2" fill="none" stroke="#00ff88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Dollar sign accent -->
+    <circle cx="14" cy="2" r="1.2" fill="#00ff88"/>
+  </g>
+  
+  <!-- Glow effect -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

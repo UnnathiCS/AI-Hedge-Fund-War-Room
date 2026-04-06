@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 92%;
+
+    --card: 222 41% 10%;
+    --card-foreground: 210 40% 92%;
+
+    --popover: 222 41% 10%;
+    --popover-foreground: 210 40% 92%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 222 30% 18%;
+    --secondary-foreground: 210 40% 85%;
+
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom war room tokens */
+    --neon-green: 142 71% 45%;
+    --neon-red: 0 72% 55%;
+    --neon-yellow: 45 93% 58%;
+    --neon-blue: 217 91% 60%;
+    --neon-purple: 270 70% 60%;
+
+    --glass: 222 41% 10%;
+    --glass-border: 222 30% 22%;
+    --glass-hover: 222 35% 14%;
+
+    --agent-aggressive: 0 72% 55%;
+    --agent-balanced: 217 91% 60%;
+    --agent-conservative: 142 71% 45%;
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 92%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 18%;
+    --sidebar-accent-foreground: 210 40% 92%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 142 71% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-glass-border rounded-xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card hover:bg-glass-hover transition-colors duration-200;
+  }
+
+  .neon-glow-green {
+    box-shadow: 0 0 15px hsl(var(--neon-green) / 0.3), 0 0 30px hsl(var(--neon-green) / 0.1);
+  }
+
+  .neon-glow-red {
+    box-shadow: 0 0 15px hsl(var(--neon-red) / 0.3), 0 0 30px hsl(var(--neon-red) / 0.1);
+  }
+
+  .neon-glow-blue {
+    box-shadow: 0 0 15px hsl(var(--neon-blue) / 0.3), 0 0 30px hsl(var(--neon-blue) / 0.1);
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes typing-dot {
+    0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(-4px); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.4s ease-out forwards;
+  }
+
+  .animate-typing-dot-1 {
+    animation: typing-dot 1.4s ease-in-out infinite;
+  }
+  .animate-typing-dot-2 {
+    animation: typing-dot 1.4s ease-in-out 0.2s infinite;
+  }
+  .animate-typing-dot-3 {
+    animation: typing-dot 1.4s ease-in-out 0.4s infinite;
+  }
+}
