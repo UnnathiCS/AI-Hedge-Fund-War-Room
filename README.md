@@ -1,6 +1,7 @@
-# AI Hedge Fund War Room - check it out : https://ai-hedge-fund-war-room--unnathics.replit.app/
-
+# AI Hedge Fund War Room - 
 An intelligent multi-agent debate system where three AI personas (Aggressive, Balanced, Safe) analyze stocks in real-time, providing personalized investment recommendations based on your trading expertise level.
+check it out : https://ai-hedge-fund-war-room--unnathics.replit.app/
+
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
